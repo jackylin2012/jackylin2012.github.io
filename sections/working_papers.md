@@ -1,0 +1,3 @@
+- **Yan Lin**, Yutong Ma, Yulin Fang, Matthew Ting Chi LIU, Jinglong Zhang, Combating AI Aversion with Disclosure Framing: The Case of AI-Generated Webcomics
+- **Yan Lin**, Wai Fong Boh. Gauging Novelty in Entrepreneurial Endeavors: A Theory-Driven Text Analysis Approach. Under review
+- Xingyu Chen, **Yan Lin**, Dai Yao. All Smiles Are Not Created Equal: More Duchenne Smiles Leads to Less Extrinsic Rewards from Viewers in Live Streaming

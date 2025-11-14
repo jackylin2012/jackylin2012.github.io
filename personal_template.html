@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Yan Lin's Webpage</title>
+    <title>{{ page_title }}</title>
 
     <!-- Modern font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -282,16 +282,16 @@
 <body>
     <!-- Sidebar/Profile Section -->
     <aside class="sidebar">
-        <img src="logo.png" alt="Profile Picture" class="profile-img">
+        <img src="{{ profile_image }}" alt="Profile Picture" class="profile-img">
         <div class="name-title">
-            <h1 class="name">LIN Yan (Jacky)</h1>
-            <p class="title">Assistant Professor</p>
-            <p class="title">Faculty of Business Administration, University of Macau</p>
+            <h1 class="name">{{ name }}</h1>
+            <p class="title">{{ title }}</p>
+            <p class="title">{{ affiliation }}</p>
         </div>
 
         <div class="contact-info">
-            <p>Email: yanlin[at sign]um[dot]edu[dot]mo</p>
-                        <p><a href="./CV_Yan_LIN.pdf">[CV]</a></p>
+            <p>Email: {{ email }}</p>
+            {{ cv_link_section }}
         </div>
 
         <nav class="nav-links">
@@ -313,7 +313,7 @@
             <section id="about" class="section">
                 <h2 class="section-title">About Me</h2>
                 <div class="markdown-content">
-                    <p>I am currently an assistant professor at <a href="https://fba.um.edu.mo/zh-hant/faculty/yanlin/">University of Macau</a>. My research focuses on applying psychology and economic theories to explain individual behavior in technology-mediated environments, to develop effective strategies for individuals and platforms, and to apply various computational methodologies to generate interdisciplinary research in business. Currently my research topics are in fintech, financial data analytics, social media, and e-commerce.</p>
+                    {{ about_content }}
                 </div>
             </section>
 
@@ -321,26 +321,7 @@
             <section id="publications" class="section">
                 <h2 class="section-title">Publications</h2>
                 <div class="publications-list">
-                    <ul>
-<li><strong>Yan Lin</strong>, Rui Shen, Jasmine Wang, and Y. Julia Yu (2024). Global Evolution of Environmental and Social Disclosure in Annual Reports. <em>Journal of Accounting Research</em>, <a href="https://doi.org/10.1111/1475-679X.12575">https://doi.org/10.1111/1475-679X.12575</a></li>
-</ul>
-<p>&ensp;&ensp; 🔥 Mentioned by The European Corporate Governance Institute (ECGI): <a href="https://www.ecgi.global/publications/blog/the-evolution-of-esg-disclosure-more-words-less-meaning">The Evolution of ESG Disclosure: More Words, Less Meaning?</a></p>
-<p>&ensp;&ensp;  🔥 Data and Code: <a href="https://github.com/jar-es-disclosure/global-es-disclosure">https://github.com/jar-es-disclosure/global-es-disclosure</a></p>
-<p>&ensp;&ensp; 🔥 SSRN Link: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957</a></p>
-<ul>
-<li>
-<p><strong>Yan Lin</strong>, Dai Yao, Xingyu Chen (2021). Happiness Begets Money: Emotion and Engagement in Live Streaming. <em>Journal of Marketing Research</em>, <a href="https://doi.org/10.1177/00222437211002477">https://doi.org/10.1177/00222437211002477</a> (<strong>Lead Article, JMR most cited paper from 2021–2022 according to Journal Citation Reports</strong>)</p>
-</li>
-<li>
-<p><strong>Yan Lin</strong>, Wai Fong Boh. "Informational Cues or Content? Examining Project Funding Decisions by Crowdfunders." <em>Information and Management</em> Volume 58, Issue 7, <a href="https://doi.org/10.1016/j.im.2021.103499">https://doi.org/10.1016/j.im.2021.103499</a></p>
-</li>
-<li>
-<p><strong>Yan Lin</strong>, Wai Fong Boh (2020). "How Different Are Crowdfunders? Examining Archetypes of Crowdfunders." <em>Journal of the Association for Information Science and Technology</em>, 71(11), 1357-1370 <a href="https://doi.org/10.1002/asi.24332">https://doi.org/10.1002/asi.24332</a></p>
-</li>
-<li>
-<p>Liang Zhu, <strong>Yan Lin</strong>, Mingming Cheng (2020). "Sentiment and guest satisfaction with peer-to-peer accommodation: When are online ratings more trustworthy?"" <em>International Journal of Hospitality Management</em>, 86 <a href="https://doi.org/10.1016/j.ijhm.2019.102369">https://doi.org/10.1016/j.ijhm.2019.102369</a></p>
-</li>
-</ul>
+                    {{ publications_content }}
                 </div>
             </section>
 
@@ -348,11 +329,7 @@
             <section id="working-papers" class="section">
                 <h2 class="section-title">Working Papers and Projects</h2>
                 <div class="markdown-content">
-                    <ul>
-<li><strong>Yan Lin</strong>, Yutong Ma, Yulin Fang, Matthew Ting Chi LIU, Jinglong Zhang, Combating AI Aversion with Disclosure Framing: The Case of AI-Generated Webcomics</li>
-<li><strong>Yan Lin</strong>, Wai Fong Boh. Gauging Novelty in Entrepreneurial Endeavors: A Theory-Driven Text Analysis Approach. Under review</li>
-<li>Xingyu Chen, <strong>Yan Lin</strong>, Dai Yao. All Smiles Are Not Created Equal: More Duchenne Smiles Leads to Less Extrinsic Rewards from Viewers in Live Streaming</li>
-</ul>
+                    {{ working_papers_content }}
                 </div>
             </section>
 
@@ -360,14 +337,7 @@
             <section id="courses" class="section">
                 <h2 class="section-title">Courses Taught</h2>
                 <div class="markdown-content">
-                    <ul>
-<li>
-<p><strong>Master's Program (Msc): Introduction to Modern Financial Technology (現代金融科技導論)</strong></p>
-</li>
-<li>
-<p><strong>Executive Program (DBA): Technology Advancement and Application for Business Management (商業管理中的先進科技與應用)</strong></p>
-</li>
-</ul>
+                    {{ courses_content }}
                 </div>
             </section>
 
@@ -375,20 +345,7 @@
             <section id="grants" class="section">
                 <h2 class="section-title">Grants</h2>
                 <div class="markdown-content">
-                    <ul>
-<li>
-<p>PI: Research on Financial Text Analysis System Based on Large Language Models (MOP, 398,000), 2025 - 2027, Science and Technology Development Fund, Macau SAR (澳門科學技術發展基金)</p>
-</li>
-<li>
-<p>Co-PI: 基於AI和運籌規劃的營銷資源分配優化 Marketing Resource Allocation Based on AI and Operations Research (RMB, 500,000), 2025/6/13 - 2026/5/30, WeBank (微眾銀行)</p>
-</li>
-<li>
-<p>PI: Machine Learning for Explainable Robo-adviser (RMB, 100,000), Multi-Year Research Grant (MYRG), 2024 - 2025, University of Macau</p>
-</li>
-<li>
-<p>PI: Global Financial Text Analysis: ESG and Culture (MOP 150,000), Start-up Research Grant (SRG), 2022 – 2025, University of Macau</p>
-</li>
-</ul>
+                    {{ grants_content }}
                 </div>
             </section>
 
@@ -396,10 +353,7 @@
             <section id="education" class="section">
                 <h2 class="section-title">Education</h2>
                 <div class="markdown-content">
-                    <p>PhD in Information Systems, Nanyang Business School, Nanyang Technological University, Singapore, 2017</p>
-<p>Bachelor of Engineering in Computer Science and Technology
-Bachelor of Economics in Finance (Dual)
-University of Science and Technology of China, 2011</p>
+                    {{ education_content }}
                 </div>
             </section>
 
@@ -407,8 +361,7 @@ University of Science and Technology of China, 2011</p>
             <section id="contact" class="section">
                 <h2 class="section-title">Contact</h2>
                 <div class="markdown-content">
-                    <p>Email: yanlin[at sign]um[dot]edu[dot]mo</p>
-<p>Address: E22-3072, Faculty of Business Administration, University of Macau, E22, Avenida da Universidade, Taipa, Macau, China</p>
+                    {{ contact_content }}
                 </div>
             </section>
 
@@ -416,25 +369,14 @@ University of Science and Technology of China, 2011</p>
             <section id="recruitment" class="section">
                 <h2 class="section-title">Recruitment</h2>
                 <div class="markdown-content">
-                    <h3>PhD Information</h3>
-<p>I am looking for PhD students in the area of Financial Text Analysis and LLM.</p>
-<p>Here are the general requirements:
-1. Strong academic background.
-2. Highly motivated and is able to work independently.
-3. Good command of English (spoken and academic writing).
-4. Good programing skills (e.g., Python) and experienced with statistical software (e.g., Stata).</p>
-<h3>Scholarship</h3>
-<p>Qualified students will be recommended for the <a href="https://grs.um.edu.mo/index.php/prospective-students/phd-funding/um-phd-scholarship/">UM PhD Scholarship</a>.
-PI funding is also available.</p>
-<p>Please send me your resume and other materials if you are interested.
-Please understand that only shortlisted candidates will be contacted for an interview.</p>
+                    {{ recruitment_content }}
                 </div>
             </section>
 
             <!-- Footer -->
             <footer class="footer">
                 <p>All Rights Reserved by  <a href="https://github.com/jackylin2012/jackylin2012.github.io" target="_blank">LIN Yan</a></p>
-                <p>Last updated: November 13, 2025</p>
+                <p>Last updated: {{ last_updated }}</p>
             </footer>
         </div>
     </main>
