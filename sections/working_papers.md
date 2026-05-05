@@ -3,3 +3,4 @@
 - Qian Wang, Yong Jin, Heng Tang, **Yan Lin**. How Blockchain Reconfigures Supply Chain Dependence: Evidence from a Quasi-Natural Experiment.
 - Xingyu Chen, **Yan Lin**, Dai Yao. All Smiles Are Not Created Equal: More Duchenne Smiles Leads to Less Extrinsic Rewards from Viewers in Live Streaming
 - **Yan Lin**, Yihong Su, Zhaobo Zhu. Empirical Asset Pricing via Learning-to-Rank, [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6348379](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6348379)
+- **Yan Lin**, Yihong Su, Yi  Yang. LambdaRankIC: Directly Optimizing Rank IC for Financial Prediction, [https://arxiv.org/abs/2605.00501v1](https://arxiv.org/abs/2605.00501v1)
