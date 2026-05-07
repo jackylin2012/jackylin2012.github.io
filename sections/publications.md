@@ -1,4 +1,4 @@
-- **Yan Lin**, Rui Shen, Jasmine Wang, and Y. Julia Yu (2024). Global Evolution of Environmental and Social Disclosure in Annual Reports. *Journal of Accounting Research*, [https://doi.org/10.1111/1475-679X.12575](https://doi.org/10.1111/1475-679X.12575)
+- **Yan Lin**, Rui Shen, Jasmine Wang, and Y. Julia Yu (2024). Global Evolution of Environmental and Social Disclosure in Annual Reports. *Journal of Accounting Research*, [https://doi.org/10.1111/1475-679X.12575](https://doi.org/10.1111/1475-679X.12575) (**UTD, FT50**)
 
 &ensp;&ensp; 🔥 Top 10 most-cited papers published by the journal in 2024 (by Clarivate Analytics)
 
@@ -8,9 +8,9 @@
 
 &ensp;&ensp; 🔥 SSRN Link: [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957)
 
+- **Yan Lin**, Dai Yao, Xingyu Chen (2021). Happiness Begets Money: Emotion and Engagement in Live Streaming. *Journal of Marketing Research*, [https://doi.org/10.1177/00222437211002477](https://doi.org/10.1177/00222437211002477) (**UTD, FT50, Lead Article**) 
 
-
-- **Yan Lin**, Dai Yao, Xingyu Chen (2021). Happiness Begets Money: Emotion and Engagement in Live Streaming. *Journal of Marketing Research*, [https://doi.org/10.1177/00222437211002477](https://doi.org/10.1177/00222437211002477) (**Lead Article, JMR most cited paper from 2021–2022 according to Journal Citation Reports**)
+&ensp;&ensp; 🔥 JMR most cited paper from 2021–2022 (by Journal Citation Reports)
 
 - **Yan Lin**, Wai Fong Boh. "Informational Cues or Content? Examining Project Funding Decisions by Crowdfunders." *Information and Management* Volume 58, Issue 7, [https://doi.org/10.1016/j.im.2021.103499](https://doi.org/10.1016/j.im.2021.103499)
 
