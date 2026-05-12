@@ -1,16 +1,16 @@
 - **Yan Lin**, Rui Shen, Jasmine Wang, and Y. Julia Yu (2024). Global Evolution of Environmental and Social Disclosure in Annual Reports. *Journal of Accounting Research*, [https://doi.org/10.1111/1475-679X.12575](https://doi.org/10.1111/1475-679X.12575) (**UTD, FT50**)
 
-&ensp;&ensp; 🔥 Top 10 most-cited papers published by the journal in 2024 (by Clarivate Analytics)
+&ensp;&ensp;&ensp;&ensp;&ensp; ▪ Top 10 most-cited papers published by the journal in 2024 (by Clarivate Analytics)
 
-&ensp;&ensp; 🔥 Mentioned by The European Corporate Governance Institute (ECGI): [The Evolution of ESG Disclosure: More Words, Less Meaning?](https://www.ecgi.global/publications/blog/the-evolution-of-esg-disclosure-more-words-less-meaning), Reported by CLS Blue Sky (Columbia Law School): [Environmental and Social Disclosure Has Evolved Around the World](https://clsbluesky.law.columbia.edu/2023/08/02/how-has-environmental-and-social-disclosure-evolved-around-the-world/)
+&ensp;&ensp;&ensp;&ensp;&ensp; ▪ Mentioned by The European Corporate Governance Institute (ECGI): [The Evolution of ESG Disclosure: More Words, Less Meaning?](https://www.ecgi.global/publications/blog/the-evolution-of-esg-disclosure-more-words-less-meaning), Reported by CLS Blue Sky (Columbia Law School): [Environmental and Social Disclosure Has Evolved Around the World](https://clsbluesky.law.columbia.edu/2023/08/02/how-has-environmental-and-social-disclosure-evolved-around-the-world/)
 
-&ensp;&ensp;  🔥 Data and Code: [https://github.com/jar-es-disclosure/global-es-disclosure](https://github.com/jar-es-disclosure/global-es-disclosure)
+&ensp;&ensp;&ensp;&ensp;&ensp;  ▪ Data and Code: [https://github.com/jar-es-disclosure/global-es-disclosure](https://github.com/jar-es-disclosure/global-es-disclosure)
 
-&ensp;&ensp; 🔥 SSRN Link: [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957)
+&ensp;&ensp;&ensp;&ensp;&ensp; ▪ SSRN Link: [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957)
 
 - **Yan Lin**, Dai Yao, Xingyu Chen (2021). Happiness Begets Money: Emotion and Engagement in Live Streaming. *Journal of Marketing Research*, [https://doi.org/10.1177/00222437211002477](https://doi.org/10.1177/00222437211002477) (**UTD, FT50, Lead Article**) 
 
-&ensp;&ensp; 🔥 JMR most cited paper from 2021–2022 (by Journal Citation Reports)
+&ensp;&ensp;&ensp;&ensp;&ensp; ▪ JMR most cited paper from 2021–2022 (by Journal Citation Reports)
 
 - **Yan Lin**, Wai Fong Boh. "Informational Cues or Content? Examining Project Funding Decisions by Crowdfunders." *Information and Management* Volume 58, Issue 7, [https://doi.org/10.1016/j.im.2021.103499](https://doi.org/10.1016/j.im.2021.103499)
 

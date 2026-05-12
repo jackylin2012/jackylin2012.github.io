@@ -13,15 +13,19 @@
 
     <style>
         :root {
-            --primary-color: #2563eb;
-            --primary-light: #dbeafe;
-            --text-color: #1e293b;
-            --text-light: #64748b;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --transition: all 0.3s ease;
+            --primary-color: #ffffff;
+            --primary-light: #262626;
+            --text-color: #e5e5e5;
+            --text-light: #a3a3a3;
+            --text-muted: #6b6b6b;
+            --bg-color: #000000;
+            --card-bg: #0a0a0a;
+            --card-bg-hover: #111111;
+            --border-color: #1f1f1f;
+            --border-hover: #2a2a2a;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.6), 0 4px 10px rgba(0, 0, 0, 0.4);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         * {
@@ -35,6 +39,8 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
@@ -49,11 +55,13 @@
             width: 300px;
             height: 100vh;
             background-color: var(--card-bg);
-            box-shadow: var(--shadow);
+            border-right: 1px solid var(--border-color);
             padding: 2rem 1.5rem;
             display: flex;
             flex-direction: column;
             z-index: 100;
+            overflow-y: auto;
+            overscroll-behavior: contain;
         }
 
         .profile-img {
@@ -62,13 +70,15 @@
             border-radius: 50%;
             object-fit: cover;
             margin: 0 auto 1.5rem;
-            border: 3px solid var(--primary-light);
+            border: 2px solid var(--border-hover);
             transition: var(--transition);
+            filter: grayscale(20%);
         }
 
         .profile-img:hover {
             transform: scale(1.05);
             border-color: var(--primary-color);
+            filter: grayscale(0%);
         }
 
         .name-title {
@@ -80,12 +90,31 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.25rem;
+            color: var(--primary-color);
+            letter-spacing: -0.02em;
         }
 
         .title {
             font-size: 1rem;
             color: var(--text-light);
             font-weight: 400;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
+            opacity: 0.8;
         }
 
         .nav-links {
@@ -95,17 +124,18 @@
         .nav-link {
             display: block;
             padding: 0.75rem 0;
-            color: var(--text-color);
+            color: var(--text-light);
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
-            border-left: 3px solid transparent;
+            border-left: 2px solid transparent;
+            padding-left: 0.75rem;
         }
 
         .nav-link:hover, .nav-link.active {
             color: var(--primary-color);
             border-left-color: var(--primary-color);
-            padding-left: 10px;
+            padding-left: 1rem;
         }
 
         /* Main Content */
@@ -116,16 +146,18 @@
 
         .section {
             background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
             transition: var(--transition);
         }
 
         .section:hover {
+            border-color: var(--border-hover);
+            background-color: var(--card-bg-hover);
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--shadow-lg);
         }
 
         .section-title {
@@ -134,7 +166,8 @@
             margin-bottom: 1.5rem;
             color: var(--primary-color);
             position: relative;
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.75rem;
+            letter-spacing: -0.02em;
         }
 
         .section-title::after {
@@ -142,10 +175,10 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
-            height: 3px;
+            width: 40px;
+            height: 2px;
             background-color: var(--primary-color);
-            border-radius: 3px;
+            border-radius: 2px;
         }
 
         .content-block {
@@ -179,27 +212,33 @@
         .footer {
             text-align: center;
             padding: 1.5rem 0;
-            color: var(--text-light);
+            color: var(--text-muted);
             font-size: 0.9rem;
             margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
         }
 
         .footer a {
-            color: var(--primary-color);
+            color: var(--text-light);
             text-decoration: none;
+            transition: var(--transition);
         }
 
         .footer a:hover {
+            color: var(--primary-color);
             text-decoration: underline;
         }
 
         /* Markdown content styling */
         .markdown-content h1, .markdown-content h2, .markdown-content h3 {
             margin: 1.5rem 0 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
         }
 
         .markdown-content p {
             margin-bottom: 1rem;
+            color: var(--text-color);
         }
 
         .markdown-content ul, .markdown-content ol {
@@ -209,15 +248,29 @@
 
         .markdown-content li {
             margin-bottom: 0.5rem;
+            color: var(--text-color);
         }
 
         .markdown-content a {
-            color: var(--primary-color);
+            color: var(--text-color);
             text-decoration: none;
+            border-bottom: 1px solid var(--border-hover);
+            transition: var(--transition);
         }
 
         .markdown-content a:hover {
-            text-decoration: underline;
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .markdown-content strong {
+            color: inherit;
+            font-weight: 600;
+        }
+
+        .markdown-content em {
+            color: inherit;
+            font-style: italic;
         }
 
         /* Publication styling */
@@ -227,10 +280,12 @@
 
         .publications-list h1, .publications-list h2, .publications-list h3 {
             margin: 1.5rem 0 1rem;
+            color: var(--primary-color);
         }
 
         .publications-list p {
             margin-bottom: 1rem;
+            color: var(--text-color);
         }
 
         .publications-list ul, .publications-list ol {
@@ -239,7 +294,31 @@
         }
 
         .publications-list li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .publications-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border-hover);
+            transition: var(--transition);
+        }
+
+        .publications-list a:hover {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .publications-list strong {
+            color: inherit;
+            font-weight: 600;
+        }
+
+        .publications-list em {
+            color: inherit;
+            font-style: italic;
         }
 
         .publication {
@@ -257,6 +336,7 @@
         .publication-title {
             font-weight: 600;
             margin-bottom: 0.5rem;
+            color: var(--primary-color);
         }
 
         .publication-details {
@@ -277,6 +357,31 @@
             gap: 0.25rem;
             font-size: 0.9rem;
         }
+
+        /* Selection color */
+        ::selection {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-hover);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
     </style>
 </head>
 <body>
@@ -290,7 +395,7 @@
         </div>
 
         <div class="contact-info">
-            <p>Email: yanlin[at sign]um[dot]edu[dot]mo</p>
+            <p>Email: yanlin[at]um[dot]edu[dot]mo</p>
                         <p><a href="./CV_Yan_LIN.pdf">[CV]</a></p>
         </div>
 
@@ -322,16 +427,17 @@
                 <h2 class="section-title">Publications</h2>
                 <div class="publications-list">
                     <ul>
-<li><strong>Yan Lin</strong>, Rui Shen, Jasmine Wang, and Y. Julia Yu (2024). Global Evolution of Environmental and Social Disclosure in Annual Reports. <em>Journal of Accounting Research</em>, <a href="https://doi.org/10.1111/1475-679X.12575">https://doi.org/10.1111/1475-679X.12575</a></li>
+<li><strong>Yan Lin</strong>, Rui Shen, Jasmine Wang, and Y. Julia Yu (2024). Global Evolution of Environmental and Social Disclosure in Annual Reports. <em>Journal of Accounting Research</em>, <a href="https://doi.org/10.1111/1475-679X.12575">https://doi.org/10.1111/1475-679X.12575</a> (<strong>UTD, FT50</strong>)</li>
 </ul>
-<p>&ensp;&ensp; 🔥 Top 10 most-cited papers published by the journal in 2024 (by Clarivate Analytics)</p>
-<p>&ensp;&ensp; 🔥 Mentioned by The European Corporate Governance Institute (ECGI): <a href="https://www.ecgi.global/publications/blog/the-evolution-of-esg-disclosure-more-words-less-meaning">The Evolution of ESG Disclosure: More Words, Less Meaning?</a>, Reported by CLS Blue Sky (Columbia Law School): <a href="https://clsbluesky.law.columbia.edu/2023/08/02/how-has-environmental-and-social-disclosure-evolved-around-the-world/">Environmental and Social Disclosure Has Evolved Around the World</a></p>
-<p>&ensp;&ensp;  🔥 Data and Code: <a href="https://github.com/jar-es-disclosure/global-es-disclosure">https://github.com/jar-es-disclosure/global-es-disclosure</a></p>
-<p>&ensp;&ensp; 🔥 SSRN Link: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957</a></p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp; ▪ Top 10 most-cited papers published by the journal in 2024 (by Clarivate Analytics)</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp; ▪ Mentioned by The European Corporate Governance Institute (ECGI): <a href="https://www.ecgi.global/publications/blog/the-evolution-of-esg-disclosure-more-words-less-meaning">The Evolution of ESG Disclosure: More Words, Less Meaning?</a>, Reported by CLS Blue Sky (Columbia Law School): <a href="https://clsbluesky.law.columbia.edu/2023/08/02/how-has-environmental-and-social-disclosure-evolved-around-the-world/">Environmental and Social Disclosure Has Evolved Around the World</a></p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;  ▪ Data and Code: <a href="https://github.com/jar-es-disclosure/global-es-disclosure">https://github.com/jar-es-disclosure/global-es-disclosure</a></p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp; ▪ SSRN Link: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4500957</a></p>
 <ul>
-<li>
-<p><strong>Yan Lin</strong>, Dai Yao, Xingyu Chen (2021). Happiness Begets Money: Emotion and Engagement in Live Streaming. <em>Journal of Marketing Research</em>, <a href="https://doi.org/10.1177/00222437211002477">https://doi.org/10.1177/00222437211002477</a> (<strong>Lead Article, JMR most cited paper from 2021–2022 according to Journal Citation Reports</strong>)</p>
-</li>
+<li><strong>Yan Lin</strong>, Dai Yao, Xingyu Chen (2021). Happiness Begets Money: Emotion and Engagement in Live Streaming. <em>Journal of Marketing Research</em>, <a href="https://doi.org/10.1177/00222437211002477">https://doi.org/10.1177/00222437211002477</a> (<strong>UTD, FT50, Lead Article</strong>) </li>
+</ul>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp; ▪ JMR most cited paper from 2021–2022 (by Journal Citation Reports)</p>
+<ul>
 <li>
 <p><strong>Yan Lin</strong>, Wai Fong Boh. "Informational Cues or Content? Examining Project Funding Decisions by Crowdfunders." <em>Information and Management</em> Volume 58, Issue 7, <a href="https://doi.org/10.1016/j.im.2021.103499">https://doi.org/10.1016/j.im.2021.103499</a></p>
 </li>
@@ -350,12 +456,18 @@
                 <h2 class="section-title">Working Papers and Projects</h2>
                 <div class="markdown-content">
                     <ul>
-<li><strong>Yan Lin</strong>, Yutong Ma, Yulin Fang, Matthew Ting Chi LIU, Jinglong Zhang, Combating AI Aversion with Disclosure Framing: The Case of AI-Generated Webcomics <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5427935">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5427935</a></li>
-<li>Yutong Ma, <strong>Yan Lin</strong>, Yongdan Liu, Matthew Liu. First-Person for Micro, Third-Person for Macro: How Visual Perspective Alignment Drives Video Engagement.</li>
+<li><strong>Yan Lin</strong>, Yutong Ma (PhD Student), Yulin Fang, Matthew Ting Chi LIU, Jinglong Zhang, Combating AI Aversion with Disclosure Framing: The Case of AI-Generated Webcomics <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5427935">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5427935</a></li>
+</ul>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp; ▪ Presentation: CSWIM 2026</p>
+<ul>
+<li>Yutong Ma (PhD Student), <strong>Yan Lin</strong>, Yongdan Liu, Matthew Liu. First-Person for Micro, Third-Person for Macro: How Visual Perspective Alignment Drives Video Engagement.</li>
 <li>Qian Wang, Yong Jin, Heng Tang, <strong>Yan Lin</strong>. How Blockchain Reconfigures Supply Chain Dependence: Evidence from a Quasi-Natural Experiment.</li>
 <li>Xingyu Chen, <strong>Yan Lin</strong>, Dai Yao. All Smiles Are Not Created Equal: More Duchenne Smiles Leads to Less Extrinsic Rewards from Viewers in Live Streaming</li>
-<li><strong>Yan Lin</strong>, Yihong Su, Zhaobo Zhu. Empirical Asset Pricing via Learning-to-Rank, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6348379">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6348379</a></li>
-<li><strong>Yan Lin</strong>, Yihong Su, Yi  Yang. LambdaRankIC: Directly Optimizing Rank IC for Financial Prediction, <a href="https://arxiv.org/abs/2605.00501v1">https://arxiv.org/abs/2605.00501v1</a></li>
+<li><strong>Yan Lin</strong>, Yihong Su (PhD Student), Zhaobo Zhu. Empirical Asset Pricing via Learning-to-Rank, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6348379">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6348379</a></li>
+</ul>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp; ▪ Presentation: 2026 China Fintech Research Conference (CFTRC2026) </p>
+<ul>
+<li><strong>Yan Lin</strong>, Yihong Su (PhD Student), Yi  Yang. LambdaRankIC: Directly Optimizing Rank IC for Financial Prediction, <a href="https://arxiv.org/abs/2605.00501v1">https://arxiv.org/abs/2605.00501v1</a></li>
 </ul>
                 </div>
             </section>
@@ -411,7 +523,7 @@ University of Science and Technology of China, 2011</p>
             <section id="contact" class="section">
                 <h2 class="section-title">Contact</h2>
                 <div class="markdown-content">
-                    <p>Email: yanlin[at sign]um[dot]edu[dot]mo</p>
+                    <p>Email: yanlin[at]um[dot]edu[dot]mo</p>
 <p>Address: E22-3072, Faculty of Business Administration, University of Macau, E22, Avenida da Universidade, Taipa, Macau, China</p>
                 </div>
             </section>
@@ -438,7 +550,7 @@ Please understand that only shortlisted candidates will be contacted for an inte
             <!-- Footer -->
             <footer class="footer">
                 <p>All Rights Reserved by  <a href="https://github.com/jackylin2012/jackylin2012.github.io" target="_blank">LIN Yan</a></p>
-                <p>Last updated: May 05, 2026</p>
+                <p>Last updated: May 12, 2026</p>
             </footer>
         </div>
     </main>
